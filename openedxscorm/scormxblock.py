@@ -88,11 +88,11 @@ class ScormXBlock(XBlock, CompletableXBlockMixin):
     display_name = String(
         display_name=_("Display Name"),
         help=_("Display name for this module"),
-        default="Scorm module",
+        default="Scorm module Testing",
         scope=Scope.settings,
     )
     index_page_path = String(
-        display_name=_("Path to the index page in scorm file"), scope=Scope.settings
+        display_name=_("Path to the index page in scorm file for all the testing purposes"), scope=Scope.settings
     )
     package_meta = Dict(scope=Scope.content)
     scorm_version = String(default="SCORM_12", scope=Scope.settings)
@@ -109,12 +109,12 @@ class ScormXBlock(XBlock, CompletableXBlockMixin):
     lesson_score = Float(scope=Scope.user_state, default=0)
     weight = Float(
         default=1,
-        display_name=_("Weight"),
+        display_name=_("Weight of the scoring here"),
         help=_("Weight/Maximum grade"),
         scope=Scope.settings,
     )
     has_score = Boolean(
-        display_name=_("Scored"),
+        display_name=_("Scored score is test"),
         help=_(
             "Select False if this component will not receive a numerical score from the Scorm"
         ),
@@ -128,12 +128,12 @@ class ScormXBlock(XBlock, CompletableXBlockMixin):
 
     icon_class = String(default="video", scope=Scope.settings)
     width = Integer(
-        display_name=_("Display width (px)"),
+        display_name=_("Display width of the scorm pane (px)"),
         help=_("Width of iframe (default: 100%)"),
         scope=Scope.settings,
     )
     height = Integer(
-        display_name=_("Display height (px)"),
+        display_name=_("Display height of the scorm pane (px)"),
         help=_("Height of iframe"),
         default=450,
         scope=Scope.settings,
@@ -149,7 +149,7 @@ class ScormXBlock(XBlock, CompletableXBlockMixin):
         scope=Scope.settings,
     )
     enable_navigation_menu = Boolean(
-        display_name=_("Display navigation menu"),
+        display_name=_("Display navigation menu of the navigaiont"),
         help=_(
             "Select True to display a navigation menu on the left side to display table of contents"
         ),
